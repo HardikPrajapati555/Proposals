@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const proposalSchema = new mongoose.Schema({
   clientName: String,
   startDate: Date,
-  duration: Date,
+  duration: String,
   slotDuration: String,
   cities: [String],
   clientType: String,
