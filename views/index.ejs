@@ -19,7 +19,22 @@
     <body style="background-color: #F1FAFF ;">
        
 
-        <h1 id="openFormBtn2" style="margin-top: -700px;"><b>PROPOSALS </b><i class="fa-solid fa-circle-plus"></i></h1>
+       <h2  style="margin-top: -700px;">PROPOSALS</h2>
+        <svg width="36" id="openFormBtn2" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="margin-top:-700px ;" id="openFormBtn3">
+            <circle cx="17.625" cy="17.625" r="17.25" fill="#F9F9FA" stroke="#37393A" stroke-width="0.75" />
+            <g clip-path="url(#clip0_4319_3938)">
+                <path d="M18.0007 11.636V24.364" stroke="#37393A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                <path d="M11.6367 18H24.3646" stroke="#37393A" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </g>
+            <defs>
+                <clipPath id="clip0_4319_3938">
+                    <rect width="18" height="18" fill="white" transform="translate(5.27344 18) rotate(-45)" />
+                </clipPath>
+            </defs>
+        </svg>
 
 
 
@@ -35,7 +50,7 @@
                     <hr>
                     <form id="proposalFormStep1">
                         <div class="form-inner">
-                            <h6 style="border:"none;">Client Name</h6>
+                            <h6 style="border: none;">Client Name</h6>
                             <input type="text" name="clientName">
                         </div>
 
@@ -47,15 +62,15 @@
                             <div class="duration">
                                 <h6>Runs for</h6>
                                 <div class="date-time">
-                                    <input type="date" name="duration">
+                                    <input type="Number" name="duration">
                                     <h6>Days</h6>
                                 </div>
                             </div>
                             <div class="duration">
                                 <h6>Slot Duration</h6>
                                 <div class="date-time">
-                                    <input type="number" name="slotDuration" id="seconds" class="seconds-input" min="0"
-                                        max="59" step="1">
+                                    <input type="number" name="slotDuration" id="seconds" class="seconds-input" min="10"
+                                        max="20" step="1">
                                     <h6>Sec</h6>
                                 </div>
                             </div>
@@ -72,28 +87,28 @@
                         <div class="city-dropdown">
                             <h6>Client Type</h6>
                             <select name="clientType" id="">
-                                <option value="Ahmedabad">National Agency</option>
-                                <option value="Gandhinagar">Local Agency</option>
-                                <option value="Surat">Direct Client(National)</option>
-                                 <option value="Ahmedabad">Direct Client (Regional / Hyper-Local)</option>
-                                 <option value="Gandhinagar">GOVT/PSU</option>
+                                <option value="National Agency">National Agency</option>
+                                <option value="Local Agency">Local Agency</option>
+                                <option value="Direct Client(National)">Direct Client(National)</option>
+                                 <option value="Direct Client (Regional / Hyper-Local)">Direct Client (Regional / Hyper-Local)</option>
+                                 <option value="GOVT/PSU">GOVT/PSU</option>
                             </select>
                         </div>
                         <div class="city-dropdown">
                             <h6>Property Type</h6>
                             <select name="propertyType" id="">
-                                <option value="Ahmedabad">Residential</option>
-                                <option value="Gandhinagar">Corporate</option>
-                                <option value="Surat">Commercial</option>
-                                <option value="Surat">Digital Billboard</option>
+                                <option value="Residential">Residential</option>
+                                <option value="Corporate">Corporate</option>
+                                <option value="Commercial">Commercial</option>
+                                <option value="Digital Billboard">Digital Billboard</option>
                             </select>
                         </div>
                         <div class="city-dropdown">
                             <h6>Plan</h6>
                             <select name="plan" id="">
                                
-                                <option value="Gandhinagar">Standerd</option>
-                                <option value="Surat">Primium</option>
+                                <option value="Standerd">Standerd</option>
+                                <option value="Primium">Primium</option>
                             </select>
                         </div>
                         <div class="form-inner">
