@@ -1,0 +1,791 @@
+/* Styles for modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with transparency */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 10px;
+  height: ;
+  margin: 20px 385px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  display: none;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Styles for form steps */
+.form {
+  padding: 20px;
+}
+
+.form h4 {
+  margin-bottom: 20px;
+}
+
+.form hr {
+  margin-bottom: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.form-inner {
+  margin-bottom: 15px;
+}
+
+.date-time-record {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.duration {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+}
+
+.date-time input[type="number"] {
+  width: 60px;
+  margin-right: 5px;
+}
+
+.city-dropdown,
+.toggle-btn {
+  margin-bottom: 15px;
+}
+
+.toggle-btn h6 {
+  margin-bottom: 5px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+.toggle-btn .slider {
+  width: 36px;
+  height: 20px;
+}
+
+.toggle-btn .slider:before {
+  border-radius: 50%;
+}
+
+/* Styles for media upload */
+.img-video {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.type-button button {
+  margin-right: 10px;
+}
+
+.upload-area {
+  padding: -20px;
+  background-color: white;
+  text-align: center;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  width: 240px;
+}
+
+.upload-button {
+  background-color: white;
+  color:  #2196F3;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border: 2px solid  #2196F3;
+  border-radius: 5px;
+  width: 210px;
+  margin: 26px 0px;
+  font-family: "Gilroy-Medium";
+}
+.preview-container {
+  margin-bottom: 15px;
+}
+
+.preview-container img {
+  max-width: 100%;
+  height: 100px;
+  margin: 20px 430px;
+  border-radius: 5px;
+}
+
+.delete-button {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  height: 10px;
+  width: 50px;
+  margin: 20px 443px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.Creative-Instruction {
+  margin-bottom: 20px;
+}
+
+.edit-next-btn2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-btn12,
+.next-btn2 {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+
+.edit-btn12 {
+  background-color: rgba(232, 175, 4, 1);
+}
+
+.next-btn2 {
+  background-color: rgba(0, 123, 255, 1);
+}
+
+.next-btn2:hover,
+.edit-btn12:hover,
+.upload-button:hover,
+.delete-button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 100%;
+    margin: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .duration {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .toggle-btn,
+  .city-dropdown {
+    margin-bottom: 10px;
+  }
+}
+
+
+
+/* Style input elements and h6 headings within the form */
+.form-inner input[type="text"],
+.form-inner input[type="number"],
+.form-inner input[type="date"],
+.form-inner select,
+.form-inner h6 {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* Style h6 headings in form */
+.form-inner h6 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Adjustments for checkboxes and switches */
+.toggle-btn h6 {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.toggle-btn .slider {
+  width: 36px;
+  height: 20px;
+}
+
+.toggle-btn .slider:before {
+  border-radius: 50%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .form-inner input[type="text"],
+  .form-inner input[type="number"],
+  .form-inner input[type="date"],
+  .form-inner select {
+    width: 100%;
+  }
+}
+
+
+
+/* Style for form elements */
+.date-time-record {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.duration,
+.city-dropdown,
+.form-inner {
+  margin-bottom: 15px;
+}
+
+.duration,
+.city-dropdown,
+.form-inner {
+  margin-bottom: 15px;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+}
+
+.date-time input,
+.date-time select {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.date-time h6,
+.city-dropdown h6,
+.form-inner h6 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.city-dropdown select,
+.form-inner input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.toggle-btn h6 {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.toggle-btn .switch {
+  position: relative;
+  display: inline-block;
+  width: 36px;
+  height: 20px;
+}
+
+.toggle-btn .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-btn .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.toggle-btn .slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+.toggle-btn input:checked + .slider {
+}
+
+.toggle-btn input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .date-time input,
+  .date-time select,
+  .form-inner input[type="text"],
+  .city-dropdown select {
+    width: 100%;
+  }
+}
+
+
+
+.date-time-record {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.duration {
+  margin-bottom: 15px;
+}
+
+.duration h6 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.date-time {
+  display: flex;
+  align-items: center;
+}
+
+.date-time input[type="date"],
+.date-time input[type="number"] {
+  flex: 1;
+  margin-left: 10px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.date-time h6 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 576px) {
+  .date-time input[type="date"],
+  .date-time input[type="number"] {
+    width: 100%;
+  }
+}
+
+
+#nextStepBtn {
+  background-color: #007bff; /* Blue background color */
+  color: white; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Padding inside button */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 4px; /* Rounded corners */
+  margin-left: 91%;
+
+}
+
+#nextStepBtn:hover {
+  background-color: #0056b3; /* Darker blue background on hover */
+}
+
+
+
+
+/* Style for <input> */
+input[type="date"] {
+  padding: 8px; /* Padding inside the input field */
+  font-size: 14px; /* Font size */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 4px; /* Rounded corners */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Optional: Focus style for <input> */
+input[type="date"]:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #007bff; /* Border color on focus */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.2); /* Box shadow on focus */
+}
+
+
+
+.Creative-Instruction {
+  margin-top: 20px; /* Adjust margin as needed */
+}
+
+.Creative-Instruction h6 {
+  margin-bottom: 10px; /* Adds space below the <h6> element */
+  color: #333; /* Text color */
+  font-size: 16px; /* Font size */
+}
+
+.Creative-Instruction input[type="text"] {
+  padding: 8px; /* Padding inside the input field */
+  font-size: 14px; /* Font size */
+  border: 1px solid #ccc; /* Border style */
+  border-radius: 4px; /* Rounded corners */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.Creative-Instruction .edit-next-btn2 {
+  margin-top: 10px; /* Adjust margin as needed */
+}
+
+.Creative-Instruction .edit-btn12 {
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: 14px; /* Font size */
+  color: #fff; /* Text color */
+  background-color: rgba(232, 175, 4, 1); /* Background color */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Cursor style */
+}
+
+.Creative-Instruction .edit-btn12:hover {
+  background-color: rgba(232, 175, 4, 0.8); /* Darker background color on hover */
+}
+
+
+.table-container {
+  position: absolute; 
+  width: 100%;
+  max-height: 500px;
+  overflow-y: auto; 
+} 
+/* CSS styles for table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header styles */
+thead {
+  background-color: #F1FAFF;
+  font-family: 'Nunito Sans';
+  /* position: sticky; */
+  color: #4d4949;
+  top: 0; 
+  z-index: 1; 
+}
+
+thead th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Table body styles */
+tbody td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row background color */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+
+
+#searchInput {
+  padding: 8px 10px;
+  margin-bottom: 10px;
+  width: 1500px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: #66afe9;
+  box-shadow: 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+
+
+
+
+
+
+/* CSS styles for review proposal form */
+#formStep3 {
+  display: none; /* Hidden by default */
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+#formStep3 h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+#formStep3 hr {
+  margin: 10px 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+#formStep3 div {
+  margin-bottom: 15px;
+}
+
+#formStep3 h6 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+#formStep3 p {
+  font-size: 0.9rem;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#submitProposalBtn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 430px;
+  margin-top: -26px;
+}
+
+#submitProposalBtn:hover {
+  background-color: #0056b3;
+}
+
+ #editProposalBtn{
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: rgb(141, 110, 10);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* margin-left: 330px; */
+ }
+
+ #editProposalBtn::hover {
+  background-color: yellow;
+}
+
+
+
+.btn30:hover {
+  color:#0D6EFD;
+}
+
+
+.btn31:hover {
+  color:#0D6EFD;
+}
+
+
+.btn32:hover {
+  color:#0D6EFD;
+}
+
+
+.btn33:hover {
+  color:#0D6EFD;
+}
+
+.table3-container34 {
+  align-items: center;
+  text-align:;
+}
+
+.table10{
+  width: 690px;
+  border-radius: 20PX;
+   margin-top: -250px;
+}
+
+.all2 {
+  height:30px; -50PX 1PX;display:;background-color: 
+                    ;gap: 2px;
+}
+
+.btn31 {
+  margin: 1px 97px;
+}
+
+.btn32 {
+  margin: 1px -13px;
+}
+
+.btn33 {
+  margin: 1px 137px;
+}
+
+.box7 {
+  border: 2px solid rgb(197, 187, 187);
+  width: 200px;
+  height: 92px;
+  border-radius: 20px;
+  font-family: 'Nunito Sans';
+}
+.box1 {
+  border: 2px solid rgb(197, 187, 187);
+  width: 200px;
+  height: 92px;
+  border-radius: 20px;
+  font-family: 'Nunito Sans';
+}
+.box3 {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(197, 187, 187);
+  width: 200px;
+  border-radius: 15px;
+  height: 71px;
+  font-family: 'Nunito Sans';
+}
+.box2 {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(197, 187, 187);
+  width: 200px;
+  border-radius: 15px;
+  height: 71px;
+  font-family: 'Nunito Sans';
+}
+.box21 {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(197, 187, 187);
+  width: 200px;
+  border-radius: 15px;
+  height: 117px;
+  font-family: 'Nunito Sans';
+}
+
+.jayyy {
+  margin: -471px 10px;
+}
+
+iframe {
+  margin: 19px 348px;
+  height: 494px;
+  width: 20;
+  width: 313px;
+}
+
+.img-video h6 {
+  font-family: "Gilroy-Medium";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.98px;
+  text-align: left;
+  margin-bottom: 75px;
+}
+
+.type-button {
+  width: 100%;
+  display: flex;
+  gap: -2px;
+}
+
+.type-button button.dark {
+  background: rgba(13, 110, 253, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.type-button button {
+  width: 100%;
+  height: 4vh;
+  border: 0.75px solid rgba(13, 110, 253, 1);
+  color: rgba(13, 110, 253, 1);
+}
