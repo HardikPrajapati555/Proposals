@@ -205,3 +205,84 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('main-proposals-table').style.display = 'none';
         document.getElementById('deleted-proposals-table').style.display = 'block';
     });
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const submitButtons = document.querySelectorAll('.submitted-button');
+  const modal = document.getElementById('editModal');
+  const span = document.getElementsByClassName('close')[0];
+  const form = document.getElementById('editForm');
+  let currentRow;
+
+  submitButtons.forEach(button => {
+      button.addEventListener('click', (event) => {
+          const button = event.target;
+          currentRow = button.closest('tr');
+
+          // Populate form with current row data
+          form.proposalId.value = button.dataset.id;
+          form.clientName.value = currentRow.cells[0].innerText;
+          form.slotDuration.value = currentRow.cells[1].innerText;
+          form.cities.value = currentRow.cells[2].innerText;
+
+          // Open modal
+          modal.style.display = 'block';
+      });
+  });
+
+  span.onclick = function() {
+      modal.style.display = 'none';
+  }
+
+  window.onclick = function(event) {
+      if (event.target == modal) {
+          modal.style.display = 'none';
+      }
+  }
+
+  form.onsubmit = async function(event) {
+      event.preventDefault();
+
+      // Update row data in the database
+      const response = await fetch('/updateProposal', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+              id: form.proposalId.value,
+              clientName: form.clientName.value,
+              slotDuration: form.slotDuration.value,
+              cities: form.cities.value
+          })
+      });
+
+      if (response.ok) {
+          // Update row data in the table
+          currentRow.cells[0].innerText = form.clientName.value;
+          currentRow.cells[1].innerText = form.slotDuration.value;
+          currentRow.cells[2].innerText = form.cities.value;
+
+          // Move the row to the pending activation table
+          const pendingActivationTableBody = document.getElementById('pending-activation-body');
+          pendingActivationTableBody.appendChild(currentRow);
+
+          // Change the ACTION cell to indicate pending activation
+          const actionCell = currentRow.cells[3];
+          actionCell.innerHTML = '<button class="btn31" style="margin-left: 10px;">Pending Activation</button>';
+
+          // Close modal
+          modal.style.display = 'none';
+      } else {
+          alert('Failed to update the proposal');
+      }
+  }
+});
+
+function showPendingActivationTable() {
+  document.getElementById('main-proposals-table').style.display = 'none';
+  document.getElementById('pending-activation-table').style.display = 'block';
+}
