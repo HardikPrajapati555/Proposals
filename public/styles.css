@@ -789,3 +789,37 @@ iframe {
   border: 0.75px solid rgba(13, 110, 253, 1);
   color: rgba(13, 110, 253, 1);
 }
+
+
+
+
+
+.table-container {
+  border-radius: 20px;
+  margin: 20px 0;
+}
+.submitted-button {
+  width: 100px;
+  border: none;
+  border-radius: 9px;
+  background-color: #0D6EFD;
+  color: white;
+}
+.discard-button {
+  color: #EF8E8F;
+  margin: 1px 18px;
+}
+.btn31 {
+  margin-left: 10px;
+}
+table {
+  width: 690px;
+  border-radius: 20px;
+}
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+th button {
+  width: 100%;
+}
