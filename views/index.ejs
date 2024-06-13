@@ -321,8 +321,8 @@
                         <th>
                             <button class="btn30" onclick="showDraftTable()">Draft</button>
                         </th>
-                        <th style="margin-left:20px ;">
-                            <button class="btn31" style="margin-left:10px ;">Pending Activation</button>
+                        <th style="margin-left:20px;">
+                            <button class="btn31" onclick="showPendingActivationTable()" style="margin-left:10px;">Pending Activation</button>
                         </th>
                         <th>
                             <button class="btn32">Active</button>
@@ -380,6 +380,22 @@
             </table>
         </div>
 
+
+<div class="table-container" id="pending-activation-table" style="display: none;">
+    <table>
+        <thead>
+            <tr style="height:30px; background-color: white; gap: 2px;">
+                <th>PROPOSAL NAME</th>
+                <th>SUMMARY</th>
+                <th>REACH</th>
+                <th>ACTION</th>
+            </tr>
+        </thead>
+        <tbody id="pending-activation-body" style="background-color: white; width: 600px;font-family: Nunito sans-serif;">
+            <!-- Rows will be moved here -->
+        </tbody>
+    </table>
+</div>
 
 
         <!-- deleted  -->
